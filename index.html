@@ -8,14 +8,22 @@
 <body>
 
 <header>
-     <nav>
-         <a href="index.html">Home</a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+        <a href="index.html">Home</a>
         <a href="rethinking.html">Rethinking</a>
         <a href="articulos.html">Artículos</a>
         <a href="contacto.html">Contacto</a>
     </nav>
     <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
 </header>
+
+    <script>
+    function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('show');
+    }
+</script>
 
 <div class="page-title">Sobre mí</div>
 
