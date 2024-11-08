@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Divulgación sobre educación y tecnología - Publicaciones">
+    <title>Divulgación Educativa</title>
+    <!-- Enlace a Google Fonts para "Open Sans" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+
+        /* Encabezado y pie de página */
+        header, footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Botón de selección de idioma */
+        .lang-toggle {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+
+        /* Título principal debajo del encabezado */
+        .page-title {
+            text-align: center;
+            color: #dc3545;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        /* Contenedor principal centrado */
+        .main-container {
+            width: 98%; /* Ajuste para aprovechar más espacio */
+            max-width: 1400px; /* Ampliado para pantallas grandes */
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Estilos de la botonera estilo pestañas */
+        .tab-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f3f4f6;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            flex: 1;
+            background-color: #dc3545; /* Color rojo para las pestañas */
+        }
+
+        .tab.active {
+            background-color: #fff; /* Fondo blanco para la pestaña activa */
+            color: #dc3545; /* Texto en rojo para la pestaña activa */
+            border-bottom: 3px solid #dc3545; /* Borde inferior en rojo */
+        }
+
+        .tab:hover {
+            background-color: #c82333; /* Color rojo oscuro para hover */
+            color: #f8f9fa; /* Color claro para mejorar visibilidad al hacer hover */
+        }
+
+        /* Contenidos de las pestañas */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Encabezado de la sección */
+        .section-header {
+            color: #dc3545; /* Color rojo para resaltar */
+            font-weight: 700;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        footer p, footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+        }
+		
+		 /* Estilos para los elementos de cada libro */
+    .book-entry {
+        display: flex;
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .book-entry img {
+        width: 150px;
+        height: 220px;
+        margin-right: 20px;
+        border-radius: 4px;
+    }
+
+    .book-info {
+        flex: 1;
+    }
+
+    .book-info h3 {
+        color: #dc3545;
+        font-size: 1.3em;
+        margin-top: 0;
+    }
+
+    .book-info p {
+        margin: 5px 0;
+    }
+	 /* Estilos para la sección de acceso a Scholar */
+    .scholar-link {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #dc3545;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .scholar-link:hover {
+        background-color: #c82333;
+    }
+	
+	
+	 /* Ajuste de ancho para la galería */
+    .section-color {
+        width: 98%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Estilos de la galería */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 150px;
+        height: 100px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Estilos del modal */
+    .modal {
+        display: none; /* Oculto por defecto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fff;
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 8px;
+    }
+
+    /* Botón de cierre más visible */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background-color: #dc3545;
+        color: #fff;
+        font-size: 24px;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .close:hover {
+        background-color: #c82333;
+    }
+    </style>
+</head>
+<body>
+
+<header>
+     <nav>
+         <a href="index.html">Home</a>
+        <a href="rethinking.html">Rethinking</a>
+        <a href="articulos.html">Artículos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+</header>
+
+<!-- Título principal debajo del encabezado -->
+<div class="page-title">Rethinking How We Teach</div>
+
+<div class="main-container">
+    <!-- Botonera estilo pestañas -->
+    <div class="tab-container">
+        <div class="tab active" onclick="openTab(event, 'divulgacion')">Libros de Divulgación</div>
+        
+        <div class="tab" onclick="openTab(event, 'eventos')">Eventos</div>
+    </div>
+
+    <!-- Contenido de cada pestaña en Español e Inglés -->
+    <div id="divulgacion" class="tab-content active">
+    <div class="section-color">
+        <h2 class="section-header" data-es="Libros de divulgación" data-en="Outreach Books">Libros de divulgación</h2>
+        
+        <!-- APLICACIÓN DE LAS TIC A LA DOCENCIA -->
+        <div class="book-entry">
+            <img src="https://via.placeholder.com/150x220" alt="Portada TIC Docencia">
+            <div class="book-info">
+                <h3 data-es="Aplicación de las TIC a la docencia" data-en="Application of ICT in Teaching">Aplicación de las TIC a la docencia</h3>
+                <p><strong>ISBN:</strong> 9788496578098</p>
+                <p><strong data-es="Editorial" data-en="Publisher">Editorial</strong>: Ideaspropias Editorial</p>
+                <p><strong data-es="Año" data-en="Year">Año</strong>: 2005</p>
+                <p data-es="La integración de las tecnologías de la información y la comunicación (TIC) en la educación actual es crucial para preparar a los estudiantes para un entorno profesional en evolución. Este libro ofrece una guía sobre nuevos métodos de enseñanza que utilizan las TIC para mejorar la calidad educativa y el desarrollo de competencias técnicas."
+                   data-en="The integration of information and communication technologies (ICT) in modern education is crucial for preparing students for an evolving professional environment. This book provides guidance on new teaching methods using ICT to enhance educational quality and the development of technical competencies.">
+                   La integración de las tecnologías de la información y la comunicación (TIC) en la educación actual es crucial para preparar a los estudiantes para un entorno profesional en evolución. Este libro ofrece una guía sobre nuevos métodos de enseñanza que utilizan las TIC para mejorar la calidad educativa y el desarrollo de competencias técnicas.</p>
+            </div>
+        </div>
+
+        <!-- APLICACIÓN DIDÁCTICA DE LAS ACTIVIDADES DE CINEFÓRUM -->
+        <div class="book-entry">
+            <img src="https://via.placeholder.com/150x220" alt="Portada Cinefórum">
+            <div class="book-info">
+                <h3 data-es="Aplicación didáctica de las actividades de cinefórum" data-en="Didactic Application of Cineforum Activities">Aplicación didáctica de las actividades de cinefórum</h3>
+                <p><strong>ISBN:</strong> 9788498392111</p>
+                <p><strong data-es="Editorial" data-en="Publisher">Editorial</strong>: Ideaspropias Editorial</p>
+                <p><strong data-es="Año" data-en="Year">Año</strong>: 2006</p>
+                <p data-es="Este manual explora cómo el cine puede utilizarse en la educación para analizar y reflexionar sobre diversas realidades y valores. Proporciona una metodología para planificar sesiones de cinefórum que faciliten el aprendizaje significativo en el aula."
+                   data-en="This manual explores how cinema can be used in education to analyze and reflect on diverse realities and values. It provides a methodology for planning cineforum sessions that facilitate meaningful learning in the classroom.">
+                   Este manual explora cómo el cine puede utilizarse en la educación para analizar y reflexionar sobre diversas realidades y valores. Proporciona una metodología para planificar sesiones de cinefórum que faciliten el aprendizaje significativo en el aula.</p>
+            </div>
+        </div>
+
+        <!-- MOTIVOS Y FACTORES EXPLICATIVOS DEL ABANDONO EDUCATIVO -->
+        <div class="book-entry">
+            <img src="https://via.placeholder.com/150x220" alt="Portada Abandono Educativo">
+            <div class="book-info">
+                <h3 data-es="Motivos y factores explicativos del abandono educativo" data-en="Reasons and Explanatory Factors of Educational Dropout">Motivos y factores explicativos del abandono educativo</h3>
+                <p><strong>ISBN:</strong> 9788436843156</p>
+                <p><strong data-es="Editorial" data-en="Publisher">Editorial</strong>: Pirámide</p>
+                <p><strong data-es="Año" data-en="Year">Año</strong>: 2020</p>
+                <p data-es="Esta obra analiza las causas y consecuencias del abandono educativo en diferentes niveles, desde la educación secundaria hasta la superior. Se abordan estrategias de intervención para reducir el abandono y apoyar la continuidad de los estudiantes en sus estudios."
+                   data-en="This work analyzes the causes and consequences of educational dropout at various levels, from secondary to higher education. It addresses intervention strategies to reduce dropout and support students' continuity in their studies.">
+                   Esta obra analiza las causas y consecuencias del abandono educativo en diferentes niveles, desde la educación secundaria hasta la superior. Se abordan estrategias de intervención para reducir el abandono y apoyar la continuidad de los estudiantes en sus estudios.</p>
+            </div>
+        </div>
+
+       <div class="book-entry">
+    <img src="https://via.placeholder.com/150x220" alt="Portada Scholar">
+    <div class="book-info">
+        <h3 data-es="Capítulos de libro de investigación científica" data-en="Scientific Research Book Chapters">Capítulos de libro de investigación científica</h3>
+        <p data-es="Si quieres conocer más sobre los libros o capítulos de libro resultado de investigación, consulta mi perfil de Scholar."
+           data-en="If you want to learn more about research books or book chapters, visit my Scholar profile.">
+           Si quieres conocer más sobre los libros o capítulos de libro resultado de investigación, consulta mi perfil de Scholar.</p>
+        <a href="https://scholar.google.es/citations?view_op=list_works&hl=es&user=uptAlg8AAAAJ" target="_blank" class="scholar-link" data-es="Ver perfil de Scholar" data-en="View Scholar Profile">Ver perfil de Scholar</a>
+    </div>
+</div>
+</div>
+
+
+
+		
+		
+		</div>
+    </div>
+
+
+
+   
+		<div id="eventos" class="tab-content">
+    <div class="section-color">
+        <h2 class="section-header" data-es="Eventos" data-en="Events">Eventos</h2>
+        <p data-es="Explora eventos y actividades académicas que apoyan la educación innovadora, ofreciendo espacios de reflexión y aprendizaje."
+           data-en="Explore events and academic activities that support innovative education, offering spaces for reflection and learning.">Explora eventos y actividades académicas que apoyan la educación innovadora, ofreciendo espacios de reflexión y aprendizaje.</p>
+
+        <!-- Galería de miniaturas -->
+        <div class="gallery">
+<img src="https://img.youtube.com/vi/xa4CnG7OWrs/mqdefault.jpg" alt="Video 1" onclick="openModal('https://www.youtube.com/embed/xa4CnG7OWrs?si=5LKfGDOE7sDiaCeJ')">
+    <img src="https://img.youtube.com/vi/6GHA4Iqv2Vk/mqdefault.jpg" alt="Video 2" onclick="openModal('https://www.youtube.com/embed/6GHA4Iqv2Vk?si=CrZ6vALj7jWkx8y5')">
+    <img src="https://img.youtube.com/vi/aKaa8_Nud_w/mqdefault.jpg" alt="Video 3" onclick="openModal('https://www.youtube.com/embed/aKaa8_Nud_w?si=Pnm0coz4CkLYTG8l')">
+    <img src="https://img.youtube.com/vi/16-xoz5uWRU/mqdefault.jpg" alt="Video 4" onclick="openModal('https://www.youtube.com/embed/16-xoz5uWRU?si=CMGwBIJqmekgrMtB')">
+    <img src="https://img.youtube.com/vi/uPeTTDhoHjE/mqdefault.jpg" alt="Video 5" onclick="openModal('https://www.youtube.com/embed/uPeTTDhoHjE?si=Hwg_EjY6s5RhVuY')">
+   <img src="https://img.youtube.com/vi/fKXvrmLyEko/mqdefault.jpg" alt="Video 6" onclick="openModal('https://www.youtube.com/embed/fKXvrmLyEko?si=KhoQQkmurP2Q9ArW')">
+    <img src="https://img.youtube.com/vi/f46YiDZqZyI/mqdefault.jpg" alt="Video 7" onclick="openModal('https://www.youtube.com/embed/f46YiDZqZyI?si=EUebs9SSdZlEbo9a')">
+    <img src="https://img.youtube.com/vi/gIDZlobIjG8/mqdefault.jpg" alt="Video 8" onclick="openModal('https://www.youtube.com/embed/gIDZlobIjG8?si=dd14HDe7AMIhJAdG')">
+</div>
+    </div>
+</div>
+
+<!-- Modal para video ampliado -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()">✕</button>
+        <iframe id="videoFrame" width="100%" height="400" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+		
+		
+	
+<footer>
+    <p>&copy; 2023 Divulgación Educativa</p>
+    <a href="/politica-de-privacidad">Política de privacidad</a> | 
+    <a href="/contacto">Contacto</a>
+</footer>
+
+<script>
+    // Función para mostrar el contenido de la pestaña seleccionada
+    function openTab(event, tabId) {
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+
+    // Función de cambio de idioma
+    function toggleLanguage() {
+        const langButton = document.querySelector('.lang-toggle');
+        const isEnglish = langButton.innerText === 'EN';
+        langButton.innerText = isEnglish ? 'ES' : 'EN';
+
+        document.querySelectorAll('[data-es]').forEach(el => {
+            el.innerText = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-es');
+        });
+    }
+	
+	
+	   // Función para abrir el modal con el video seleccionado
+    function openModal(videoUrl) {
+        document.getElementById('videoFrame').src = videoUrl;
+        document.getElementById('videoModal').style.display = 'flex';
+    }
+
+    // Función para cerrar el modal y detener el video
+    function closeModal() {
+        document.getElementById('videoModal').style.display = 'none';
+        document.getElementById('videoFrame').src = '';
+    }
+</script>
+
+</body>
+</html>

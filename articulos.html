@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos Científicos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+        header, footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .lang-toggle {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+        .page-title {
+            text-align: center;
+            color: #dc3545;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            background-color: #f3f4f6;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #fff;
+            background-color: #dc3545;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .tab.active {
+            background-color: #fff;
+            color: #dc3545;
+            border-bottom: 3px solid #dc3545;
+        }
+        .main-container {
+            width: 98%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .article-section {
+            display: none;
+        }
+        .article-entry {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .article-entry h3 {
+            color: #dc3545;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .article-entry p {
+            margin: 5px 0;
+        }
+        .article-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #dc3545;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        footer p, footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+         <a href="index.html">Home</a>
+        <a href="rethinking.html">Rethinking</a>
+        <a href="articulos.html">Artículos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+</header>
+
+<div class="page-title">Artículos Científicos</div>
+
+<div class="tab-container">
+    <button class="tab active" onclick="showSection('2020-2021')">Artículos 2020-2021</button>
+    <button class="tab" onclick="showSection('2022-2023')">Artículos 2022-2023</button>
+    <button class="tab" onclick="showSection('2024-2025')">Artículos 2024-2025</button>
+</div>
+
+<div class="main-container">
+    <!-- Sección de artículos de 2020-2021 -->
+    <div id="2020-2021" class="article-section" style="display: block;">
+        <!-- Aquí se listan los artículos de 2020-2021 -->
+        <!-- Ejemplo de artículo -->
+        <div class="article-entry">
+    <h3 data-es="Desinformación en redes sociales y bots: escenarios simulados de su propagación desde la dinámica de sistemas" 
+        data-en="Disinformation in Social Networks and Bots: Simulated Scenarios of Its Spread from System Dynamics">
+        Desinformación en redes sociales y bots: escenarios simulados de su propagación desde la dinámica de sistemas
+    </h3>
+    <p data-es="Autores: Alfredo Guzmán, Ruby Lorena Carrillo, Nuria Segovia-García, David Ricardo Africano-Franco" 
+       data-en="Authors: Alfredo Guzmán, Ruby Lorena Carrillo, Nuria Segovia-García, David Ricardo Africano-Franco">
+       <strong>Autores:</strong> Alfredo Guzmán, Ruby Lorena Carrillo, Nuria Segovia-García, David Ricardo Africano-Franco
+    </p>
+    <p data-es="Resumen: Análisis de la propagación de desinformación en redes sociales a través de agentes como bots y trolls."
+       data-en="Abstract: Analysis of disinformation spread in social networks through agents such as bots and trolls.">
+       <strong>Resumen:</strong> Análisis de la propagación de desinformación en redes sociales a través de agentes como bots y trolls.
+    </p>
+    <a href="https://www.mdpi.com/2079-8954/10/2/34" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+	
+	
+	
+	
+	<div class="article-entry">
+    <h3 data-es="Educación superior virtual en Colombia: factores asociados al abandono" 
+        data-en="Virtual Higher Education in Colombia: Factors Associated with Dropout">
+        Educación superior virtual en Colombia: factores asociados al abandono
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García, Elías Said-Hung, Francisco José García Aguilera" 
+       data-en="Authors: Nuria Segovia-García, Elías Said-Hung, Francisco José García Aguilera">
+       <strong>Autores:</strong> Nuria Segovia-García, Elías Said-Hung, Francisco José García Aguilera
+    </p>
+    <p data-es="Resumen: Análisis de factores que contribuyen al abandono en educación virtual en Colombia y propuestas para mejorar la retención."
+       data-en="Abstract: Analysis of factors contributing to dropout in virtual education in Colombia and proposals to improve retention.">
+       <strong>Resumen:</strong> Análisis de factores que contribuyen al abandono en educación virtual en Colombia y propuestas para mejorar la retención.
+    </p>
+    <a href="https://doi.org/10.5944/eduxx1.30455" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Valoración de los estudiantes sobre la calidad del e-learning en Colombia" 
+        data-en="Student Perception of E-Learning Quality in Colombia">
+        Valoración de los estudiantes sobre la calidad del e-learning en Colombia
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Evaluación de la percepción estudiantil sobre la calidad del aprendizaje en modalidad virtual en Colombia."
+       data-en="Abstract: Evaluation of student perception of quality in virtual learning in Colombia.">
+       <strong>Resumen:</strong> Evaluación de la percepción estudiantil sobre la calidad del aprendizaje en modalidad virtual en Colombia.
+    </p>
+    <a href="https://doi.org/10.24310/IJNE.9.2022.14678" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Criterios de calidad de un MOOC basado en la valoración de los estudiantes" 
+        data-en="Quality Criteria of a MOOC Based on Student Assessment">
+        Criterios de calidad de un MOOC basado en la valoración de los estudiantes
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Identificación de criterios de calidad para MOOCs desde la perspectiva de los estudiantes."
+       data-en="Abstract: Identification of quality criteria for MOOCs from students' perspective.">
+       <strong>Resumen:</strong> Identificación de criterios de calidad para MOOCs desde la perspectiva de los estudiantes.
+    </p>
+    <a href="https://recyt.fecyt.es/index.php/BORDON/article/view/87938" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Factores de satisfacción de los alumnos en e-learning en Colombia" 
+        data-en="Student Satisfaction Factors in E-Learning in Colombia">
+        Factores de satisfacción de los alumnos en e-learning en Colombia
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García, Elías Said-Hung" 
+       data-en="Authors: Nuria Segovia-García, Elías Said-Hung">
+       <strong>Autores:</strong> Nuria Segovia-García, Elías Said-Hung
+    </p>
+    <p data-es="Resumen: Análisis de la satisfacción estudiantil en educación virtual en universidades colombianas."
+       data-en="Abstract: Analysis of student satisfaction in virtual education in Colombian universities.">
+       <strong>Resumen:</strong> Análisis de la satisfacción estudiantil en educación virtual en universidades colombianas.
+    </p>
+    <a href="https://www.scielo.org.mx/scielo.php?pid=S1405-66662021000200595&script=sci_arttext" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="El abandono estudiantil en programas de educación superior virtual: revisión de literatura" 
+        data-en="Student Dropout in Virtual Higher Education Programs: Literature Review">
+        El abandono estudiantil en programas de educación superior virtual: revisión de literatura
+    </h3>
+    <p data-es="Autores: David Orellana Viñambres, Nuria Segovia-García, Belén Rodríguez Cánovas" 
+       data-en="Authors: David Orellana Viñambres, Nuria Segovia-García, Belén Rodríguez Cánovas">
+       <strong>Autores:</strong> David Orellana Viñambres, Nuria Segovia-García, Belén Rodríguez Cánovas
+    </p>
+    <p data-es="Resumen: Revisión de literatura sobre factores que influyen en el abandono en la educación superior virtual."
+       data-en="Abstract: Literature review on factors influencing dropout in virtual higher education.">
+       <strong>Resumen:</strong> Revisión de literatura sobre factores que influyen en el abandono en la educación superior virtual.
+    </p>
+    <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-27602020000200047" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Multivariate Analysis of Attitudes, Knowledge and Use of ICT in Students Involved in Virtual Research Seedbeds" 
+        data-en="Análisis Multivariante de Actitudes, Conocimientos y Uso de TIC en Estudiantes de Semilleros de Investigación Virtuales">
+        Multivariate Analysis of Attitudes, Knowledge and Use of ICT in Students Involved in Virtual Research Seedbeds
+    </h3>
+    <p data-es="Autores: Magda Alejandra Martinez-Daza, Alfredo Guzmán Rincón, Jader Alexis Castaño Rico, Nuria Segovia-García, Harvey Yesid Montilla Buitrago" 
+       data-en="Authors: Magda Alejandra Martinez-Daza, Alfredo Guzmán Rincón, Jader Alexis Castaño Rico, Nuria Segovia-García, Harvey Yesid Montilla Buitrago">
+       <strong>Autores:</strong> Magda Alejandra Martinez-Daza, Alfredo Guzmán Rincón, Jader Alexis Castaño Rico, Nuria Segovia-García, Harvey Yesid Montilla Buitrago
+    </p>
+    <p data-es="Resumen: Estudio sobre actitudes y uso de TIC en estudiantes de semilleros de investigación virtuales."
+       data-en="Abstract: Study on attitudes and use of ICT in students involved in virtual research seedbeds.">
+       <strong>Resumen:</strong> Estudio sobre actitudes y uso de TIC en estudiantes de semilleros de investigación virtuales.
+    </p>
+    <a href="https://www.mdpi.com/2254-9625/11/1/4" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+        <!-- Añade más artículos aquí -->
+    </div>
+
+    <!-- Sección de artículos de 2022-2023 -->
+    <div id="2022-2023" class="article-section">
+        <!-- Aquí se listan los artículos de 2022-2023 -->
+        <!-- Ejemplo de artículo -->
+    
+	
+	<div class="article-entry">
+    <h3 data-es="Aceptación de los exámenes supervisados a través de herramientas de e-proctoring por parte de los estudiantes" 
+        data-en="Student Acceptance of Proctored Exams Using E-Proctoring Tools">
+        Aceptación de los exámenes supervisados a través de herramientas de e-proctoring por parte de los estudiantes
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Análisis de la percepción estudiantil hacia el e-proctoring en evaluaciones en línea."
+       data-en="Abstract: Analysis of student perception towards e-proctoring in online assessments.">
+       <strong>Resumen:</strong> Análisis de la percepción estudiantil hacia el e-proctoring en evaluaciones en línea.
+    </p>
+    <a href="https://revistaaloma.blanquerna.edu/index.php/aloma/article/view/649" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Percepción y uso de los chatbots entre estudiantes de posgrado online: Un estudio exploratorio" 
+        data-en="Perception and Use of Chatbots Among Online Graduate Students: An Exploratory Study">
+        Percepción y uso de los chatbots entre estudiantes de posgrado online: Un estudio exploratorio
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Exploración de la percepción de estudiantes de posgrado sobre chatbots en entornos educativos."
+       data-en="Abstract: Exploration of graduate students' perception of chatbots in educational environments.">
+       <strong>Resumen:</strong> Exploración de la percepción de estudiantes de posgrado sobre chatbots en entornos educativos.
+    </p>
+    <a href="https://revistas.uvigo.es/index.php/reined/article/view/4974" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+	
+	
+	<div class="article-entry">
+    <h3 data-es="Análisis de costos en la enseñanza online utilizando un mapa de actividades" 
+        data-en="Cost Analysis in Online Teaching Using an Activity Map">
+        Análisis de costos en la enseñanza online utilizando un mapa de actividades
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García, Ester Martin-Caro" 
+       data-en="Authors: Nuria Segovia-García, Ester Martin-Caro">
+       <strong>Autores:</strong> Nuria Segovia-García, Ester Martin-Caro
+    </p>
+    <p data-es="Resumen: Este estudio analiza los costos de una universidad virtual usando el modelo de Costos Basados en Actividades (ABC)."
+       data-en="Abstract: This study analyzes the costs of a virtual university using the Activity-Based Costing (ABC) model.">
+       <strong>Resumen:</strong> Este estudio analiza los costos de una universidad virtual usando el modelo de Costos Basados en Actividades (ABC).
+    </p>
+    <a href="https://www.mdpi.com/2227-7102/13/5/506" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Infraestructura necesaria para facilitar una educación superior online de calidad" 
+        data-en="Necessary Infrastructure to Facilitate Quality Online Higher Education">
+        Infraestructura necesaria para facilitar una educación superior online de calidad
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Análisis de los requisitos tecnológicos y de soporte académico para ofrecer educación superior online de calidad."
+       data-en="Abstract: Analysis of technological and academic support requirements to offer quality online higher education.">
+       <strong>Resumen:</strong> Análisis de los requisitos tecnológicos y de soporte académico para ofrecer educación superior online de calidad.
+    </p>
+    <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=8840175" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Propuesta de mejora en el diseño de interfaz y experiencia de usuario (UX) en Moodle: valoración del alumnado" 
+        data-en="Proposal for Improved Interface and User Experience (UX) Design in Moodle: Student Evaluation">
+        Propuesta de mejora en el diseño de interfaz y experiencia de usuario (UX) en Moodle: valoración del alumnado
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Análisis y rediseño de la interfaz de Moodle para mejorar la experiencia de usuario desde la perspectiva del alumnado."
+       data-en="Abstract: Analysis and redesign of Moodle interface to improve user experience from the students' perspective.">
+       <strong>Resumen:</strong> Análisis y rediseño de la interfaz de Moodle para mejorar la experiencia de usuario desde la perspectiva del alumnado.
+    </p>
+    <a href="https://www.edutec.es/revista/index.php/edutec-e/article/view/2673/1057" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Educación superior online: una oportunidad para la población desplazada" 
+        data-en="Online Higher Education: An Opportunity for Displaced Population">
+        Educación superior online: una oportunidad para la población desplazada
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Estudio que propone la educación superior online como alternativa para poblaciones en situación de desplazamiento."
+       data-en="Abstract: Study proposing online higher education as an alternative for displaced populations.">
+       <strong>Resumen:</strong> Estudio que propone la educación superior online como alternativa para poblaciones en situación de desplazamiento.
+    </p>
+    <a href="http://journals.eagora.org/revHUMAN/article/view/3971" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Abandono en la educación superior rural: análisis de causas desde el pensamiento sistémico" 
+        data-en="Dropout in Rural Higher Education: Analysis of Causes from Systemic Thinking">
+        Abandono en la educación superior rural: análisis de causas desde el pensamiento sistémico
+    </h3>
+    <p data-es="Autores: Alfredo Guzmán, Sandra Barragán Moreno, Favio Cala-Viter, Nuria Segovia-García" 
+       data-en="Authors: Alfredo Guzmán, Sandra Barragán Moreno, Favio Cala-Viter, Nuria Segovia-García">
+       <strong>Autores:</strong> Alfredo Guzmán, Sandra Barragán Moreno, Favio Cala-Viter, Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Análisis de las causas del abandono en educación superior rural y las políticas insuficientes para mitigarlo."
+       data-en="Abstract: Analysis of dropout causes in rural higher education and insufficient policies to mitigate it.">
+       <strong>Resumen:</strong> Análisis de las causas del abandono en educación superior rural y las políticas insuficientes para mitigarlo.
+    </p>
+    <a href="https://hipatiapress.com/hpjournals/index.php/qre/article/view/10048" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+
+
+        <!-- Añade más artículos aquí -->
+    </div>
+
+    <!-- Sección de artículos de 2024-2025 -->
+    <div id="2024-2025" class="article-section">
+        <!-- Aquí se listan los artículos de 2024-2025 -->
+        <!-- Ejemplo de artículo -->
+       <div class="article-entry">
+    <h3 data-es="Chatbot de IA para prevenir el abandono de la educación superior" 
+        data-en="AI Chatbot to Prevent Dropout in Higher Education">
+        Chatbot de IA para prevenir el abandono de la educación superior
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García, Lourdes Segovia-García" 
+       data-en="Authors: Nuria Segovia-García, Lourdes Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García, Lourdes Segovia-García
+    </p>
+    <p data-es="Resumen: Revisión del uso de chatbots en la educación superior para reducir el abandono estudiantil mediante apoyo personalizado."
+       data-en="Abstract: Review of the use of chatbots in higher education to reduce student dropout through personalized support.">
+       <strong>Resumen:</strong> Revisión del uso de chatbots en la educación superior para reducir el abandono estudiantil mediante apoyo personalizado.
+    </p>
+    <a href="https://revistas.usal.es/tres/index.php/eks/article/view/31416" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="El profesional de la pedagogía como docente en entornos de educación no formal" 
+        data-en="The Role of Pedagogy Professionals in Non-Formal Education">
+        El profesional de la pedagogía como docente en entornos de educación no formal
+    </h3>
+    <p data-es="Autores: Francisco José García Aguilera, Antonio Matas Terrón, Diego Aguilar Cuenca, Nuria Segovia García" 
+       data-en="Authors: Francisco José García Aguilera, Antonio Matas Terrón, Diego Aguilar Cuenca, Nuria Segovia García">
+       <strong>Autores:</strong> Francisco José García Aguilera, Antonio Matas Terrón, Diego Aguilar Cuenca, Nuria Segovia García
+    </p>
+    <p data-es="Resumen: Estudio sobre el rol de los pedagogos en la educación no formal, resaltando competencias digitales y metodológicas."
+       data-en="Abstract: Study on the role of pedagogy professionals in non-formal education, highlighting digital and methodological competencies.">
+       <strong>Resumen:</strong> Estudio sobre el rol de los pedagogos en la educación no formal, resaltando competencias digitales y metodológicas.
+    </p>
+    <a href="https://educar.uab.cat/article/view/v61-n1-garcia-et-al" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Estrategia de análisis de datos en entornos digitales: evaluación de la actividad docente" 
+        data-en="Data Analysis Strategy in Digital Environments: Evaluation of Teaching Activity">
+        Estrategia de análisis de datos en entornos digitales: evaluación de la actividad docente
+    </h3>
+    <p data-es="Autores: Lourdes Segovia, Nuria Segovia-García" 
+       data-en="Authors: Lourdes Segovia, Nuria Segovia-García">
+       <strong>Autores:</strong> Lourdes Segovia, Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Implementación de una estrategia de visualización de datos en Moodle para mejorar la evaluación docente."
+       data-en="Abstract: Implementation of a data visualization strategy in Moodle to improve teacher evaluation.">
+       <strong>Resumen:</strong> Implementación de una estrategia de visualización de datos en Moodle para mejorar la evaluación docente.
+    </p>
+    <a href="https://epsir.net/index.php/epsir/article/view/369" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Optimización de la atención estudiantil. Una revisión del uso de chatbots de IA en la educación superior" 
+        data-en="Optimizing Student Support: A Review of the Use of AI Chatbots in Higher Education">
+       Optimización de la atención estudiantil. Una revisión del uso de chatbots de IA en la educación superior
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong>  Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Revisión de la literatura sobre herramietnas de inteligencia artificial usadas en la educación superior para mejorar la atención del estudiante."
+       data-en="Abstract: Literature review on artificial intelligence tools used in higher education to improve student support.">
+       <strong>Resumen:</strong> Revisión de la literatura sobre herramietnas de inteligencia artificial usadas en la educación superior para mejorar la atención del estudiante
+    </p>
+    <a href="https://epsir.net/index.php/epsir/article/view/324" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+
+<div class="article-entry">
+    <h3 data-es="Abandono en la educación superior virtual colombiana: factores de riesgo para grupos vulnerables" 
+        data-en="Dropout in Colombian Virtual Higher Education: Risk Factors for Vulnerable Groups">
+        Abandono en la educación superior virtual colombiana: factores de riesgo para grupos vulnerables
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García, Elias M. Said-Hung, Francisco J. García Aguilera" 
+       data-en="Authors: Nuria Segovia-García, Elias M. Said-Hung, Francisco J. García Aguilera">
+       <strong>Autores:</strong> Nuria Segovia-García, Elias M. Said-Hung, Francisco J. García Aguilera
+    </p>
+    <p data-es="Resumen: Análisis de factores de riesgo de abandono en estudiantes virtuales vulnerables en Colombia."
+       data-en="Abstract: Analysis of dropout risk factors among vulnerable virtual students in Colombia.">
+       <strong>Resumen:</strong> Análisis de factores de riesgo de abandono en estudiantes virtuales vulnerables en Colombia.
+    </p>
+    <a href="https://riuma.uma.es/xmlui/bitstream/handle/10630/33142/Abandono%20en%20la%20educaci%C3%B3n%20superior%20virtual%20colombiana%20factores%20de%20riesgo%20para%20grupos%20vulnerables.pdf?sequence=1" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+<div class="article-entry">
+    <h3 data-es="Análisis multidimensional de plataformas educativas: Canvas vs. Moodle en la educación superior" 
+        data-en="Multidimensional Analysis of Educational Platforms: Canvas vs. Moodle in Higher Education">
+        Análisis multidimensional de plataformas educativas: Canvas vs. Moodle en la educación superior
+    </h3>
+    <p data-es="Autores: Nuria Segovia-García" 
+       data-en="Authors: Nuria Segovia-García">
+       <strong>Autores:</strong> Nuria Segovia-García
+    </p>
+    <p data-es="Resumen: Comparación entre Canvas y Moodle en aspectos económicos, técnicos y pedagógicos."
+       data-en="Abstract: Comparison between Canvas and Moodle in economic, technical, and pedagogical aspects.">
+       <strong>Resumen:</strong> Comparación entre Canvas y Moodle en aspectos económicos, técnicos y pedagógicos.
+    </p>
+    <a href="https://revistavirtual.ucn.edu.co/index.php/RevistaUCN/article/view/1609" target="_blank" class="article-link" data-es="Leer artículo completo" data-en="Read full article">Leer artículo completo</a>
+</div>
+
+
+
+
+        <!-- Añade más artículos aquí -->
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Artículos Científicos</p>
+    <a href="/politica-de-privacidad">Política de privacidad</a> | 
+    <a href="/contacto">Contacto</a>
+</footer>
+
+<script>
+    function toggleLanguage() {
+        const langButton = document.querySelector('.lang-toggle');
+        const isEnglish = langButton.innerText === 'EN';
+        langButton.innerText = isEnglish ? 'ES' : 'EN';
+        document.querySelectorAll('[data-es]').forEach(el => {
+            el.innerText = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-es');
+        });
+    }
+
+    function showSection(sectionId) {
+        document.querySelectorAll('.article-section').forEach(section => section.style.display = 'none');
+        document.getElementById(sectionId).style.display = 'block';
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

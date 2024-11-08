@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí - Rethinking How We Teach</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+
+        /* Encabezado y pie de página */
+        header, footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Botón de selección de idioma */
+        .lang-toggle {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+
+        /* Título principal */
+        .page-title {
+            text-align: center;
+            color: #dc3545;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        /* Contenedor principal centrado con el mismo ancho de la otra página */
+        .content {
+            width: 98%; /* Igual al de la otra página */
+            max-width: 1200px; /* Ajuste idéntico al de la otra página */
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Estilo para la sección Sobre mí */
+        #sobre-mi {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        #sobre-mi img {
+            border-radius: 8px;
+            width: 150px;
+            height: auto;
+        }
+
+        /* Estilo para secciones Educación y Experiencia */
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .section h3 {
+            color: #dc3545;
+            font-size: 1.3em;
+            margin-top: 0;
+        }
+
+        footer p {
+            color: #fff;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+     <nav>
+         <a href="index.html">Home</a>
+        <a href="rethinking.html">Rethinking</a>
+        <a href="articulos.html">Artículos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+</header>
+
+<div class="page-title">Sobre mí</div>
+
+<div class="content">
+    <!-- Sección de Sobre mí -->
+    <div id="sobre-mi">
+        <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=uptAlg8AAAAJ&citpid=4" alt="Foto de perfil de Nuria Segovia">
+        <div>
+            <p id="about-text-es">Mi nombre es <strong>Nuria Segovia</strong> y a través de este espacio quiero compartir con vosotros una de mis pasiones, la investigación sobre la tecnología educativa y su impacto en los estudiantes. Este sitio se ha llamado "<strong>Rethinking how we teach</strong>" porque la entrada de las TIC en todos los niveles de la educación está exigiendo que hagamos las cosas de una manera diferente para poder aprovechar todo el potencial de estos medios.</p>
+            <p id="about-text-en" style="display:none;">My name is <strong>Nuria Segovia</strong>, and through this space, I want to share one of my passions with you: researching educational technology and its impact on students. This site is named "<strong>Rethinking how we teach</strong>" because the advent of ICT in all levels of education demands that we do things differently to harness the full potential of these tools.</p>
+        </div>
+    </div>
+
+    <!-- Sección Educación -->
+    <div class="section">
+        <h3 data-es="Educación" data-en="Education">Educación</h3>
+        <p id="education-text-es">Soy <strong>Licenciada en Pedagogía</strong> por la Universidad de Salamanca y <strong>Doctora Cum Laude</strong> por la Universidad Internacional de la Rioja. Desde hace varios años formo parte del grupo de investigación <strong>Sinergia Digital</strong> reconocido por <strong>Colciencias</strong>.</p>
+        <p id="education-text-en" style="display:none;">I hold a <strong>Bachelor’s Degree in Pedagogy</strong> from the University of Salamanca and a <strong>Doctorate with Cum Laude</strong> honors from the International University of La Rioja. For several years, I have been part of the <strong>Sinergia Digital</strong> research group recognized by <strong>Colciencias</strong>.</p>
+    </div>
+
+    <!-- Sección Experiencia Profesional -->
+    <div class="section">
+        <h3 data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h3>
+        <p id="experience-text-es">Poseo amplia experiencia en conceptualización, diseño, desarrollo e implantación de proyectos educativos y en la administración y gestión de diferentes LMS, tecnologías y soluciones integrales para la educación. Actualmente, soy Directora de Tecnología en el <strong>Instituto Europeo de Posgrado y la Red de universidades Summa</strong>, donde constantemente seguimos investigando e innovando para mejorar la experiencia de nuestros alumnos.</p>
+        <p id="experience-text-en" style="display:none;">I have extensive experience in conceptualizing, designing, developing, and implementing educational projects, as well as in the administration and management of various LMS platforms, technologies, and comprehensive educational solutions. Currently, I am the Director of Technology at the <strong>European Graduate Institute and the Summa University Network</strong>, where we continuously research and innovate to enhance our students’ experience.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Rethinking How We Teach</p>
+</footer>
+
+<script>
+    // Función para cambiar entre español e inglés
+    let isSpanish = true;
+    function toggleLanguage() {
+        isSpanish = !isSpanish;
+        document.getElementById('about-text-es').style.display = isSpanish ? 'block' : 'none';
+        document.getElementById('about-text-en').style.display = isSpanish ? 'none' : 'block';
+        
+        document.getElementById('education-text-es').style.display = isSpanish ? 'block' : 'none';
+        document.getElementById('education-text-en').style.display = isSpanish ? 'none' : 'block';
+
+        document.getElementById('experience-text-es').style.display = isSpanish ? 'block' : 'none';
+        document.getElementById('experience-text-en').style.display = isSpanish ? 'none' : 'block';
+
+        document.querySelector('.lang-toggle').innerText = isSpanish ? 'EN' : 'ES';
+    }
+</script>
+
+</body>
+</html>
