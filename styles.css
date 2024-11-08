@@ -1,0 +1,242 @@
+/* Estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+}
+
+/* Encabezado y pie de página */
+header, footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Hover en enlaces de navegación para cambiar a rojo */
+nav a:hover {
+    color: #dc3545;
+}
+
+/* Botón de selección de idioma */
+.lang-toggle {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+/* Título principal */
+.page-title {
+    text-align: center;
+    color: #dc3545;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+/* Contenedor principal centrado */
+.content, .main-container {
+    width: 98%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Estilo de sección */
+.section, .article-entry, .book-entry {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.section h3, .book-info h3, .article-entry h3 {
+    color: #dc3545;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+footer p, footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+
+/* Botonera de pestañas */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f3f4f6;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    flex: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab.active {
+    background-color: #fff;
+    color: #dc3545;
+    border-bottom: 3px solid #dc3545;
+}
+
+.tab:hover {
+    background-color: #c82333;
+    color: #f8f9fa;
+}
+
+/* Contenidos de las pestañas */
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Enlaces y botones personalizados */
+.scholar-link, .article-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.scholar-link:hover, .article-link:hover {
+    background-color: #c82333;
+}
+
+/* Galería y modal */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close:hover {
+    background-color: #c82333;
+}
+/* Estilo para cada entrada de libro */
+.book-entry {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.book-entry img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h3 {
+    color: #dc3545;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+.book-info p {
+    margin: 5px 0;
+}
