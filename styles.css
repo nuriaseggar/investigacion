@@ -240,3 +240,66 @@ footer p, footer a {
 .book-info p {
     margin: 5px 0;
 }
+
+/* Estilos básicos para el menú */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #dc3545;
+}
+
+/* Estilos para el botón de menú en dispositivos pequeños */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Oculta el menú de navegación */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav.show {
+        display: flex; /* Muestra el menú cuando se active */
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+}
