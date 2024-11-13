@@ -1,305 +1,382 @@
-/* Estilos generales */
-body {
-    font-family: 'Open Sans', sans-serif;
+/* General */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f3f4f6;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Encabezado y pie de página */
-header, footer {
-    width: 100%;
+/* Navbar */
+#navbar {
     background-color: #333;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+#navbar ul {
+    display: flex;
     align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #444;
 }
 
-nav {
-    flex: 1;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
+#navbar ul li {
     margin: 0 10px;
+}
+
+#navbar ul li a {
+    color: #ffffff;
+    padding: 10px 15px;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-/* Hover en enlaces de navegación para cambiar a rojo */
-nav a:hover {
-    color: #dc3545;
-}
-
-/* Botón de selección de idioma */
-.lang-toggle {
-    background-color: #007bff;
-    color: #fff;
+    font-size: 16px;
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+}
+
+#navbar ul li a:hover,
+.language-toggle:hover {
+    background-color: #666;
     border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-weight: 600;
-    margin-right: 20px;
 }
 
-/* Título principal */
-.page-title {
-    text-align: center;
-    color: #dc3545;
-    font-size: 2em;
-    font-weight: 700;
-    margin: 20px 0;
-}
-
-/* Contenedor principal centrado */
-.content, .main-container {
-    width: 98%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Estilo de sección */
-.section, .article-entry, .book-entry {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.section h3, .book-info h3, .article-entry h3 {
-    color: #dc3545;
-    font-size: 1.3em;
-    margin-top: 0;
-}
-
-footer p, footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9em;
-}
-
-/* Botonera de pestañas */
-.tab-container {
-    display: flex;
-    justify-content: center;
-    background-color: #f3f4f6;
-    border-bottom: 2px solid #e0e0e0;
-    margin-bottom: 20px;
-}
-
-.tab {
-    padding: 15px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #fff;
-    background-color: #dc3545;
-    border-radius: 8px 8px 0 0;
-    text-align: center;
-    flex: 1;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.tab.active {
-    background-color: #fff;
-    color: #dc3545;
-    border-bottom: 3px solid #dc3545;
-}
-
-.tab:hover {
-    background-color: #c82333;
-    color: #f8f9fa;
-}
-
-/* Contenidos de las pestañas */
-.tab-content {
+.hidden-section {
     display: none;
+}
+
+/* Language Toggle */
+.language-toggle {
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* Contenedor principal de About */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 0 0 8px 8px;
 }
 
-.tab-content.active {
-    display: block;
+/* Contenedor principal de Research */
+.research-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Enlaces y botones personalizados */
-.scholar-link, .article-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: #dc3545;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.scholar-link:hover, .article-link:hover {
-    background-color: #c82333;
-}
-
-/* Galería y modal */
-.gallery {
+/* Encabezados compartidos para About y Research */
+.about-header, .research-header {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-header h1, .research-header h1 {
+    font-size: 4em;
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.about-header h1::after, .research-header h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 15px;
+    height: 100%;
+    background-color: red;
+}
+
+/* Ajuste para centrar el contador y los botones antes del primer artículo */
+.pagination-header {
+    display: flex;
+    flex-direction: column; /* Coloca el contador y los botones en columnas */
+    align-items: center; /* Centra horizontalmente el contenido */
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    text-align: center;
+}
+
+#article-count {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio entre el contador y los botones */
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+.pagination-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination-button:hover {
+    background-color: darkred;
+}
+
+/* Línea separadora */
+.separator-line {
+    border-top: 1px solid #ccc;
+    margin: 5px 0; /* Ajusta para que esté cerca del texto */
+    width: calc(100% - 40px); /* Alineación con el margen */
+    margin-left: 50px;
+}
+
+/* Contenedor de artículos en Research */
+#research-articles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada artículo en Research */
+.article-entry {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Estilos del enlace y del icono triangular */
+.article-link {
+    display: flex;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.article-link .triangle-icon {
+    margin-right: 5px;
+    font-size: 0.9em;
+    color: red;
+}
+
+.article-link:hover {
+    color: darkred;
+}
+
+.article-link:hover .triangle-icon {
+    color: darkred;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+}
+/* Estilos para la galería de videos en Rethinking */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     margin-top: 20px;
-    justify-content: center;
 }
 
 .gallery img {
-    width: 150px;
-    height: 100px;
+    width: 100%;
     cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
 }
 
+/* Estilos del modal */
 .modal {
     display: none;
     position: fixed;
-    top: 0;
+    z-index: 1000;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
 }
 
 .modal-content {
-    position: relative;
-    background-color: #fff;
-    padding: 20px;
     width: 80%;
-    max-width: 800px;
-    border-radius: 8px;
+    max-width: 700px;
 }
 
-.close {
+.modal-content iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.modal-close {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    background-color: #dc3545;
-    color: #fff;
-    font-size: 24px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+/* Ajuste para la galería de videos */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Aumenta el tamaño mínimo de las miniaturas */
+    gap: 20px; /* Aumenta la separación entre videos */
+    margin-top: 30px; /* Aumenta la separación entre el texto y la galería */
+    width: 100%; /* Mantiene el ancho completo de la galería */
 }
 
-.close:hover {
-    background-color: #c82333;
-}
-/* Estilo para cada entrada de libro */
-.book-entry {
-    display: flex;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.book-entry img {
-    width: 150px;
+.gallery img {
+    width: 100%;
     height: auto;
-    margin-right: 20px;
-    border-radius: 4px;
-}
-
-.book-info {
-    flex: 1;
-}
-
-.book-info h3 {
-    color: #dc3545;
-    font-size: 1.3em;
-    margin-top: 0;
-}
-
-.book-info p {
-    margin: 5px 0;
-}
-
-/* Estilos básicos para el menú */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #333;
-    color: #fff;
-}
-
-nav {
-    display: flex;
-    gap: 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #dc3545;
-}
-
-/* Estilos para el botón de menú en dispositivos pequeños */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: #fff;
-    background: none;
-    border: none;
     cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.menu-toggle:focus {
-    outline: none;
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.about-recognition {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Estilos responsive */
-@media (max-width: 768px) {
-    nav {
-        display: none; /* Oculta el menú de navegación */
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-    }
+.highlight-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-    nav.show {
-        display: flex; /* Muestra el menú cuando se active */
-    }
 
-    .menu-toggle {
-        display: block; /* Muestra el botón de menú */
-    }
+
+.highlight-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 25px 0;
+    border-left: 4px solid #007ACC;
+    padding-left: 10px;
+    margin-bottom: 15px; /* Aumenta el espacio entre los elementos */
+}
+
+
+
+
+.highlight-list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+.about-recognition h3 {
+    font-size: 1.5em;
+    position: relative;
+    color: #333; /* Puedes cambiarlo si deseas otro color para el texto */
+    margin-bottom: 15px;
+}
+
+.about-recognition h3::after {
+    content: "";
+    display: block;
+    width: 50px; /* Largo de la línea decorativa */
+    height: 4px; /* Grosor de la línea */
+    background-color: #FF0000; /* Color rojo */
+    margin-top: 8px;
+    border-radius: 2px; /* Opcional: bordes redondeados para la línea */
+}
+.about-recognition {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-recognition h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-recognition ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-recognition ul li {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.about-recognition ul li i {
+    color: #0077b5; /* Cambia el color del ícono */
+    margin-right: 8px;
+}
+
+.about-recognition ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.about-recognition ul li a:hover {
+    color: #0077b5;
 }
