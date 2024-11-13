@@ -1,79 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí - Rethinking How We Teach</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Curriculum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
+  <!-- Menú de Navegación -->
+<nav id="navbar">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#rethinking">Rethinking</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <!-- Botón de idioma -->
+    <li><button class="language-toggle" onclick="toggleLanguage()">EN</button></li>
+  </ul>
+</nav>
 
-<header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="rethinking.html">Rethinking</a>
-        <a href="articulos.html">Artículos</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-    <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-</header>
 
-    <script>
-    function toggleMenu() {
-        const nav = document.querySelector('nav');
-        nav.classList.toggle('show');
-    }
-</script>
 
-<div class="page-title">Sobre mí</div>
 
-<div class="content">
-    <!-- Sección de Sobre mí -->
-    <div id="sobre-mi">
-        <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=uptAlg8AAAAJ&citpid=4" alt="Foto de perfil de Nuria Segovia">
-        <div>
-            <p id="about-text-es">Mi nombre es <strong>Nuria Segovia</strong> y a través de este espacio quiero compartir con vosotros una de mis pasiones, la investigación sobre la tecnología educativa y su impacto en los estudiantes. Este sitio se ha llamado "<strong>Rethinking how we teach</strong>" porque la entrada de las TIC en todos los niveles de la educación está exigiendo que hagamos las cosas de una manera diferente para poder aprovechar todo el potencial de estos medios.</p>
-            <p id="about-text-en" style="display:none;">My name is <strong>Nuria Segovia</strong>, and through this space, I want to share one of my passions with you: researching educational technology and its impact on students. This site is named "<strong>Rethinking how we teach</strong>" because the advent of ICT in all levels of education demands that we do things differently to harness the full potential of these tools.</p>
-        </div>
-    </div>
+  <!-- Sección About -->
+  <section id="about" class="section">
+    <div class="about-container">
+      <!-- Primera columna: Título y línea decorativa -->
+      <div class="about-header">
+        <h1>About</h1>
+        <div class="decorative-line"></div>
+      </div>
 
-    <!-- Sección Educación -->
-    <div class="section">
-        <h3 data-es="Educación" data-en="Education">Educación</h3>
-        <p id="education-text-es">Soy <strong>Licenciada en Pedagogía</strong> por la Universidad de Salamanca y <strong>Doctora Cum Laude</strong> por la Universidad Internacional de la Rioja. Desde hace varios años formo parte del grupo de investigación <strong>Sinergia Digital</strong> reconocido por <strong>Colciencias</strong>.</p>
-        <p id="education-text-en" style="display:none;">I hold a <strong>Bachelor’s Degree in Pedagogy</strong> from the University of Salamanca and a <strong>Doctorate with Cum Laude</strong> honors from the International University of La Rioja. For several years, I have been part of the <strong>Sinergia Digital</strong> research group recognized by <strong>Colciencias</strong>.</p>
-    </div>
-
-    <!-- Sección Experiencia Profesional -->
-    <div class="section">
-        <h3 data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h3>
-        <p id="experience-text-es">Poseo amplia experiencia en conceptualización, diseño, desarrollo e implantación de proyectos educativos y en la administración y gestión de diferentes LMS, tecnologías y soluciones integrales para la educación. Actualmente, soy Directora de Tecnología en el <strong>Instituto Europeo de Posgrado y la Red de universidades Summa</strong>, donde constantemente seguimos investigando e innovando para mejorar la experiencia de nuestros alumnos.</p>
-        <p id="experience-text-en" style="display:none;">I have extensive experience in conceptualizing, designing, developing, and implementing educational projects, as well as in the administration and management of various LMS platforms, technologies, and comprehensive educational solutions. Currently, I am the Director of Technology at the <strong>European Graduate Institute and the Summa University Network</strong>, where we continuously research and innovate to enhance our students’ experience.</p>
-    </div>
+      <!-- Segunda columna: Imagen y texto general -->
+      <div class="about-text">
+        <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=uptAlg8AAAAJ&citpid=4" alt="Foto de Nuria Segovia" class="profile-image">
+        <div class="text-content">
+          <!-- Contenido en Español -->
+          <div id="content-es">
+    <h2>Repensando la forma en que enseñamos</h2>
+    <p>Mi nombre es <strong>Nuria Segovia</strong>, y en este espacio comparto mi pasión por la <strong>investigación en tecnología educativa</strong> y su <strong>impacto en la educación</strong>. Las TIC han transformado la enseñanza en todos los niveles, y mi objetivo es explorar cómo podemos <strong>reinventar nuestra forma de enseñar</strong> para aprovechar al máximo las herramientas digitales en el aprendizaje.</p>
+    
+    <h3>Formación Académica</h3>
+    <p>Soy <strong>Licenciada en Pedagogía</strong> por la Universidad de Salamanca y obtuve el <strong>Doctorado Cum Laude en Educación</strong> por la Universidad Internacional de La Rioja. Mi camino en la investigación se fortalece siendo parte del <strong>grupo Sinergia Digital</strong>, reconocido por Colciencias, donde trabajamos en proyectos enfocados en la innovación educativa.</p>
+    
+    <h3>Experiencia Profesional</h3>
+    <p>Con amplia experiencia en la <strong>conceptualización y desarrollo de proyectos educativos</strong>, he trabajado en la <strong>administración y gestión de LMS</strong> y tecnologías educativas integrales. Actualmente, soy <strong>Directora de Tecnología</strong> en el Instituto Europeo de Posgrado y en la <strong>Red de universidades Summa</strong>, donde, junto a un equipo, seguimos investigando e innovando para mejorar la experiencia educativa de nuestros estudiantes.</p>
+    
+    <h3>Qué encontrarás en este sitio</h3>
+    <p>
+        <strong>Research:</strong> Acceso a mis artículos y publicaciones recientes en tecnología educativa.<br>
+        <strong>Rethinking How We Teach:</strong> Reflexiones e innovaciones para transformar la enseñanza mediante nuevas metodologías y tecnología.
+    </p>
 </div>
 
-<footer>
-    <p>&copy; 2023 Rethinking How We Teach</p>
-</footer>
+          <!-- Contenido en Inglés -->
+          <div id="content-en" class="hidden">
+            <h2>Rethinking How We Teach</h2>
+    <p>My name is <strong>Nuria Segovia</strong>, and in this space, I share my passion for <strong>educational technology research</strong> and its <strong>impact on education</strong>. ICT has transformed teaching at all levels, and my goal is to explore how we can <strong>reinvent our approach to teaching</strong> to make the most of digital tools in learning.</p>
+    
+    <h3>Academic Background</h3>
+    <p>I hold a <strong>Bachelor’s degree in Pedagogy</strong> from the University of Salamanca and earned my <strong>PhD in Education, Cum Laude</strong>, from the International University of La Rioja. My research journey is enriched by being part of the <strong>Sinergia Digital research group</strong>, recognized by Colciencias, where we work on projects focused on educational innovation.</p>
+    
+    <h3>Professional Experience</h3>
+    <p>With extensive experience in the <strong>conceptualization and development of educational projects</strong>, I have worked in <strong>administration and management of LMS platforms</strong> and comprehensive educational technologies. Currently, I serve as <strong>Director of Technology</strong> at the European Graduate Institute and the <strong>Summa University Network</strong>, where, alongside a dedicated team, we continue to research and innovate to enhance the educational experience for our students.</p>
+    
+    <h3>What You’ll Find on This Site</h3>
+    <p>
+        <strong>Research:</strong> Access to my recent articles and publications in educational technology.<br>
+        <strong>Rethinking How We Teach:</strong> Insights and innovations aimed at transforming teaching through new methodologies and technology.
+    </p>
+</div>
+        </div>
+      </div>
 
-<script>
-    // Función para cambiar entre español e inglés
-    let isSpanish = true;
-    function toggleLanguage() {
-        isSpanish = !isSpanish;
-        document.getElementById('about-text-es').style.display = isSpanish ? 'block' : 'none';
-        document.getElementById('about-text-en').style.display = isSpanish ? 'none' : 'block';
+      <!-- Tercera columna: Reconocimientos -->
+      <div class="about-recognition">
+	     <div id="content-es">
+        <h3>Highlights</h3>
+<ul>
+  <li><strong>PhD en Educación</strong>, Doctora Cum Laude (UNIR)</li>
+  <li><strong>Profesora con acreditación ANECA</strong> en las categorías de Ayudante Doctor, Contratado Doctor y Titular de Universidad</li>
+  <li><strong>Investigadora reconocida por Colciencias</strong></li>
+  <li><strong>Directora de Tecnología</strong> en RED Summa</li>
+  <li><strong>Miembro del grupo de investigación Sinergia Digital</strong></li>
+</ul>
+         
+        </ul> </div>
+		<div id="content-en" class="hidden">
+        <h3>Highlights</h3>
+        <ul>
+  <li><strong>PhD in Education</strong>, Doctorate Cum Laude (UNIR)</li>
+  <li><strong>ANECA-accredited Professor</strong> in the categories of Assistant Professor, Associate Professor, and Full Professor</li>
+  <li><strong>Recognized Researcher</strong> by Colciencias</li>
+  <li><strong>Technology Director</strong> at RED Summa</li>
+  <li><strong>Member of the Sinergia Digital research group</strong></li>
+</ul> </div>
+      </div>
+    
+	     
+  </section>
+
+
+  <!-- Sección Research -->
+  <section id="research" class="section">
+    <div class="research-container">
+      <!-- Contador de artículos y controles de navegación -->
+      <div class="pagination-header">
+        <span id="article-count">10 articles found</span>
+        <div class="pagination-controls">
+          <button id="prevPage" class="pagination-button">⮜ Previous</button>
+          <button id="nextPage" class="pagination-button">Next ⮞</button>
+        </div>
+      </div>
+
+      <!-- Línea separadora -->
+      <div class="separator-line"></div>
+
+      <!-- Columna de encabezado -->
+      <div class="about-header">
+        <h1>Research</h1>
+        <div class="decorative-line"></div>
+      </div>
+
+      <!-- Contenedor de artículos -->
+      <div id="research-articles">
+        <div class="article-entry">
+    <h3>Chatbot de IA para prevenir el abandono de la educación superior</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García, Lourdes Segovia-García</p>
+    <p><strong>Resumen:</strong> Revisión del uso de chatbots en la educación superior para reducir el abandono estudiantil mediante apoyo personalizado.</p>
+    <a href="https://revistas.usal.es/tres/index.php/eks/article/view/31416" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>El profesional de la pedagogía como docente en entornos de educación no formal</h3>
+    <p><strong>Autores:</strong> Francisco José García Aguilera, Antonio Matas Terrón, Diego Aguilar Cuenca, Nuria Segovia García</p>
+    <p><strong>Resumen:</strong> Estudio sobre el rol de los pedagogos en la educación no formal, resaltando competencias digitales y metodológicas.</p>
+    <a href="https://educar.uab.cat/article/view/v61-n1-garcia-et-al" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Estrategia de análisis de datos en entornos digitales: evaluación de la actividad docente</h3>
+    <p><strong>Autores:</strong> Lourdes Segovia, Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Implementación de una estrategia de visualización de datos en Moodle para mejorar la evaluación docente.</p>
+    <a href="https://epsir.net/index.php/epsir/article/view/369" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Optimización de la atención estudiantil. Una revisión del uso de chatbots de IA en la educación superior</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Revisión de la literatura sobre herramientas de inteligencia artificial usadas en la educación superior para mejorar la atención del estudiante.</p>
+    <a href="https://epsir.net/index.php/epsir/article/view/324" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Abandono en la educación superior virtual colombiana: factores de riesgo para grupos vulnerables</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García, Elias M. Said-Hung, Francisco J. García Aguilera</p>
+    <p><strong>Resumen:</strong> Análisis de factores de riesgo de abandono en estudiantes virtuales vulnerables en Colombia.</p>
+    <a href="https://riuma.uma.es/xmlui/bitstream/handle/10630/33142/Abandono%20en%20la%20educaci%C3%B3n%20superior%20virtual%20colombiana%20factores%20de%20riesgo%20para%20grupos%20vulnerables.pdf?sequence=1" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Análisis multidimensional de plataformas educativas: Canvas vs. Moodle en la educación superior</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Comparación entre Canvas y Moodle en aspectos económicos, técnicos y pedagógicos.</p>
+    <a href="https://revistavirtual.ucn.edu.co/index.php/RevistaUCN/article/view/1609" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Aceptación de los exámenes supervisados a través de herramientas de e-proctoring por parte de los estudiantes</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Análisis de la percepción estudiantil hacia el e-proctoring en evaluaciones en línea.</p>
+    <a href="https://revistaaloma.blanquerna.edu/index.php/aloma/article/view/649" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Percepción y uso de los chatbots entre estudiantes de posgrado online: Un estudio exploratorio</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Exploración de la percepción de estudiantes de posgrado sobre chatbots en entornos educativos.</p>
+    <a href="https://revistas.uvigo.es/index.php/reined/article/view/4974" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Análisis de costos en la enseñanza online utilizando un mapa de actividades</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García, Ester Martin-Caro</p>
+    <p><strong>Resumen:</strong> Este estudio analiza los costos de una universidad virtual usando el modelo de Costos Basados en Actividades (ABC).</p>
+    <a href="https://www.mdpi.com/2227-7102/13/5/506" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Infraestructura necesaria para facilitar una educación superior online de calidad</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Análisis de los requisitos tecnológicos y de soporte académico para ofrecer educación superior online de calidad.</p>
+    <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=8840175" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Propuesta de mejora en el diseño de interfaz y experiencia de usuario (UX) en Moodle: valoración del alumnado</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Análisis y rediseño de la interfaz de Moodle para mejorar la experiencia de usuario desde la perspectiva del alumnado.</p>
+    <a href="https://www.edutec.es/revista/index.php/edutec-e/article/view/2673/1057" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Educación superior online: una oportunidad para la población desplazada</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Estudio que propone la educación superior online como alternativa para poblaciones en situación de desplazamiento.</p>
+    <a href="http://journals.eagora.org/revHUMAN/article/view/3971" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Abandono en la educación superior rural: análisis de causas desde el pensamiento sistémico</h3>
+    <p><strong>Autores:</strong> Alfredo Guzmán, Sandra Barragán Moreno, Favio Cala-Viter, Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Análisis de las causas del abandono en educación superior rural y las políticas insuficientes para mitigarlo.</p>
+    <a href="https://hipatiapress.com/hpjournals/index.php/qre/article/view/10048" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+<div class="article-entry">
+    <h3>Desinformación en redes sociales y bots: escenarios simulados de su propagación desde la dinámica de sistemas</h3>
+    <p><strong>Autores:</strong> Alfredo Guzmán, Ruby Lorena Carrillo, Nuria Segovia-García, David Ricardo Africano-Franco</p>
+    <p><strong>Resumen:</strong> Análisis de la propagación de desinformación en redes sociales a través de agentes como bots y trolls.</p>
+    <a href="https://www.mdpi.com/2079-8954/10/2/34" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Educación superior virtual en Colombia: factores asociados al abandono</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García, Elías Said-Hung, Francisco José García Aguilera</p>
+    <p><strong>Resumen:</strong> Análisis de factores que contribuyen al abandono en educación virtual en Colombia y propuestas para mejorar la retención.</p>
+    <a href="https://doi.org/10.5944/eduxx1.30455" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Valoración de los estudiantes sobre la calidad del e-learning en Colombia</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Evaluación de la percepción estudiantil sobre la calidad del aprendizaje en modalidad virtual en Colombia.</p>
+    <a href="https://doi.org/10.24310/IJNE.9.2022.14678" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Criterios de calidad de un MOOC basado en la valoración de los estudiantes</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García</p>
+    <p><strong>Resumen:</strong> Identificación de criterios de calidad para MOOCs desde la perspectiva de los estudiantes.</p>
+    <a href="https://recyt.fecyt.es/index.php/BORDON/article/view/87938" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Factores de satisfacción de los alumnos en e-learning en Colombia</h3>
+    <p><strong>Autores:</strong> Nuria Segovia-García, Elías Said-Hung</p>
+    <p><strong>Resumen:</strong> Análisis de la satisfacción estudiantil en educación virtual en universidades colombianas.</p>
+    <a href="https://www.scielo.org.mx/scielo.php?pid=S1405-66662021000200595&script=sci_arttext" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>El abandono estudiantil en programas de educación superior virtual: revisión de literatura</h3>
+    <p><strong>Autores:</strong> David Orellana Viñambres, Nuria Segovia-García, Belén Rodríguez Cánovas</p>
+    <p><strong>Resumen:</strong> Revisión de literatura sobre factores que influyen en el abandono en la educación superior virtual.</p>
+    <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-27602020000200047" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+<div class="article-entry">
+    <h3>Multivariate Analysis of Attitudes, Knowledge and Use of ICT in Students Involved in Virtual Research Seedbeds</h3>
+    <p><strong>Autores:</strong> Magda Alejandra Martinez-Daza, Alfredo Guzmán Rincón, Jader Alexis Castaño Rico, Nuria Segovia-García, Harvey Yesid Montilla Buitrago</p>
+    <p><strong>Resumen:</strong> Estudio sobre actitudes y uso de TIC en estudiantes de semilleros de investigación virtuales.</p>
+    <a href="https://www.mdpi.com/2254-9625/11/1/4" target="_blank" class="article-link">
+        <span class="triangle-icon">▶</span> Leer artículo completo
+    </a>
+</div>
+
+
+
+
+
+
+	  
+	  
+	  
+	  
+	  
+	 
+      <!-- Repetir divs de "article-entry" para otros artículos -->
+    </div>
+  </div>
+</section>
+
+<section id="rethinking" class="section">
+  <div class="about-container">
+    <!-- Columna de encabezado -->
+    <div class="about-header">
+      <h1>Rethinking</h1>
+      <div class="decorative-line"></div>
+    </div>
+    
+   
+    <!-- Columna de contenido (texto y galería de videos) -->
+    <div class="about-text">
+      <div class="text-content">
+        <!-- Contenido en Español -->
+        <div id="content-es">
+          <h2>Repensando cómo enseñamos</h2>
+          <p>Esta sección explora enfoques innovadores en la enseñanza, destacando el uso de nuevas tecnologías y metodologías para mejorar el aprendizaje.</p>
+        </div>
         
-        document.getElementById('education-text-es').style.display = isSpanish ? 'block' : 'none';
-        document.getElementById('education-text-en').style.display = isSpanish ? 'none' : 'block';
+        <!-- Contenido en Inglés -->
+        <div id="content-en" class="hidden">
+          <h2>Rethinking How We Teach</h2>
+          <p>This section explores innovative approaches to teaching, highlighting the use of new technologies and methodologies to enhance learning.</p>
+        </div>
+      </div>
+      
+      <!-- Galería de Videos -->
+      <div class="gallery">
+        <img src="https://img.youtube.com/vi/xa4CnG7OWrs/mqdefault.jpg" alt="Video 1" onclick="openModal('https://www.youtube.com/embed/xa4CnG7OWrs')">
+        <img src="https://img.youtube.com/vi/6GHA4Iqv2Vk/mqdefault.jpg" alt="Video 2" onclick="openModal('https://www.youtube.com/embed/6GHA4Iqv2Vk')">
+        <img src="https://img.youtube.com/vi/aKaa8_Nud_w/mqdefault.jpg" alt="Video 3" onclick="openModal('https://www.youtube.com/embed/aKaa8_Nud_w')">
+        <img src="https://img.youtube.com/vi/16-xoz5uWRU/mqdefault.jpg" alt="Video 4" onclick="openModal('https://www.youtube.com/embed/16-xoz5uWRU')">
+        <img src="https://img.youtube.com/vi/uPeTTDhoHjE/mqdefault.jpg" alt="Video 5" onclick="openModal('https://www.youtube.com/embed/uPeTTDhoHjE')">
+        <img src="https://img.youtube.com/vi/fKXvrmLyEko/mqdefault.jpg" alt="Video 6" onclick="openModal('https://www.youtube.com/embed/fKXvrmLyEko')">
+        <img src="https://img.youtube.com/vi/f46YiDZqZyI/mqdefault.jpg" alt="Video 7" onclick="openModal('https://www.youtube.com/embed/f46YiDZqZyI')">
+        <img src="https://img.youtube.com/vi/gIDZlobIjG8/mqdefault.jpg" alt="Video 8" onclick="openModal('https://www.youtube.com/embed/gIDZlobIjG8')">
+      </div>
+    </div>
+  </div>
+</section>
 
-        document.getElementById('experience-text-es').style.display = isSpanish ? 'block' : 'none';
-        document.getElementById('experience-text-en').style.display = isSpanish ? 'none' : 'block';
 
-        document.querySelector('.lang-toggle').innerText = isSpanish ? 'EN' : 'ES';
-    }
-</script>
 
+<!-- Sección Contact -->
+<!-- Sección Contact -->
+<section id="contact" class="section">
+  <div class="about-container">
+    <!-- Columna de encabezado -->
+    <div class="about-header">
+      <h1>Contact</h1>
+      <div class="decorative-line"></div>
+    </div>
+    
+    <!-- Columna de contenido (Español e Inglés) -->
+    <div class="about-text">
+      <!-- Contenido en Español -->
+      <div id="content-es">
+        <div class="text-content">
+          <h2>Ponte en contacto</h2>
+          <p>Si deseas saber más sobre mis investigaciones o discutir posibles colaboraciones, no dudes en comunicarte conmigo.</p>
+          <h3>Información de contacto</h3>
+          <p>Email: nuria.seggar@gmail.com</p>
+        </div>
+      </div>
+      
+      <!-- Contenido en Inglés -->
+      <div id="content-en" class="hidden">
+        <div class="text-content">
+          <h2>Get in Touch</h2>
+          <p>If you want to learn more about my research or discuss possible collaborations, feel free to contact me.</p>
+          <h3>Contact Information</h3>
+          <p>Email: nuria.seggar@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Columna de redes sociales o enlaces adicionales -->
+    <div class="about-recognition">
+    <h3>Academic Networks</h3>
+    <ul>
+        <li><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=uptAlg8AAAAJ" target="_blank">Google Scholar</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nuriasegovia" target="_blank">LinkedIn</a></li>
+    </ul>
+</div>
+  </div>
+</section>
+
+<div id="videoModal" class="modal" onclick="closeModal()">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <iframe id="modalVideo" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
