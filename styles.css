@@ -25,3 +25,20 @@
 .portrait-column-v8 .portrait-card{left:-28px;right:-18px;bottom:0;z-index:2}
 @media(max-width:850px){.portrait-column-v8{width:220px}.portrait-v8{height:275px}}
 @media(max-width:560px){.portrait-column-v8{width:190px}.portrait-v8{height:238px}.portrait-column-v8 .portrait-card{left:18px;right:-70px}}
+
+/* V10 — academic profiles: Scholar, ORCID and Scopus */
+.academic-profiles-inline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;font-size:.78rem}
+.academic-profiles-inline>span{color:var(--muted);font-weight:600}
+.academic-profiles-inline a{color:#247187;text-decoration:none;font-weight:700;border-bottom:1px solid transparent}
+.academic-profiles-inline a:hover{border-bottom-color:currentColor}
+.academic-profiles-section{padding:44px 0 20px}
+.academic-profiles-head{display:grid;grid-template-columns:minmax(220px,.6fr) minmax(0,1fr);column-gap:48px;align-items:end;margin-bottom:22px}
+.academic-profiles-head .eyebrow{grid-column:1/-1}
+.academic-profiles-head h2{font:700 clamp(1.9rem,3.5vw,3rem)/1.05 'Playfair Display',serif;letter-spacing:-.03em;margin:0}
+.academic-profiles-head>p:last-child{color:var(--muted);line-height:1.65;margin:0;max-width:620px}
+.academic-profile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.academic-profile-grid a{position:relative;display:flex;flex-direction:column;min-height:120px;padding:20px 48px 20px 20px;border:1px solid var(--line);border-radius:14px;background:white;text-decoration:none}
+.academic-profile-grid span{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700}
+.academic-profile-grid strong{margin-top:14px;font-size:.9rem;line-height:1.45}
+.academic-profile-grid em{position:absolute;right:18px;top:18px;font-style:normal;color:#247187;font-weight:700}
+@media(max-width:850px){.academic-profiles-head{grid-template-columns:1fr;gap:12px}.academic-profile-grid{grid-template-columns:1fr}.academic-profile-grid a{min-height:0}}
